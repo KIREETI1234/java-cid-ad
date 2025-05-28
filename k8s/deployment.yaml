@@ -1,24 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
-    app: java-deploy
-  name: java-deploy
+    app: java-app-k8
+  name: java-app-k8
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-deploy
-  strategy: {}
+      app: java-app-k8
   template:
     metadata:
-      creationTimestamp: null
       labels:
-        app: java-deploy
+        app: java-app-k8
     spec:
       containers:
-      - image: sahil0824/spring-boot-app:latest
-        name: sahil0824
-        resources: {}
-status: {}
+      - image: kireeti1234/java-session
+        name: kireeti1234
